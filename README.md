@@ -2,7 +2,7 @@
 
 Multi-label deep learning pipeline for joint Diabetic Retinopathy (DR) grading and Diabetic Macular Edema (DME) risk classification on fundus images, with Grad-CAM explainability to make predictions clinically interpretable.
 
-**[Live Demo →](#) &nbsp;|&nbsp; [Report (PDF) →](./report/report.pdf) &nbsp;|&nbsp; [Dataset: IDRiD →](https://idrid.grand-challenge.org/)**
+ **[Dataset: IDRiD →](https://idrid.grand-challenge.org/)**
 
 <p align="center">
   <img src="./assets/gradcam_grid.png" width="800" alt="Grad-CAM visualization across DR severity levels">
