@@ -1,0 +1,9 @@
+.venv/
+retinal/
+__pycache__/
+*.pyc
+
+data/raw/
+outputs/checkpoints/*.pt
+
+.streamlit/
