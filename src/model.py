@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as tv_models
 
-import config
+from src import config
 
 try:
     import timm

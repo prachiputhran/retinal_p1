@@ -11,7 +11,7 @@ from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.image import show_cam_on_image
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 
-import config
+from src import config
 from dataset import preprocess_fundus_image, IMAGENET_MEAN, IMAGENET_STD
 from model import MultiLabelRetinalNet
 

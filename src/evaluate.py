@@ -17,7 +17,7 @@ from sklearn.preprocessing import label_binarize
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-import config
+from src import config
 from dataset import IDRiDMultiLabelDataset, get_val_transforms
 from model import MultiLabelRetinalNet
 

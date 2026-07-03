@@ -13,7 +13,7 @@ from torch.utils.data import Dataset
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-import config
+from src import config
 
 
 # ---------------------------------------------------------------------------

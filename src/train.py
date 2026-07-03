@@ -13,7 +13,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import cohen_kappa_score
 from tqdm import tqdm
 
-import config
+from src import config
 from dataset import IDRiDMultiLabelDataset, get_train_transforms, get_val_transforms, compute_class_weights
 from model import MultiLabelRetinalNet, MultiTaskLoss
 
