@@ -2,7 +2,7 @@
 
 Multi-label deep learning pipeline for joint Diabetic Retinopathy (DR) grading and Diabetic Macular Edema (DME) risk classification on fundus images, with Grad-CAM explainability to make predictions clinically interpretable.
 
- **[Live Demo →](https://retinalp1-748baprlmhnhxwhtxdgsku.streamlit.app/) | [Dataset: IDRiD →](https://idrid.grand-challenge.org/)** | [Report-]()
+ **[Live Demo →](https://retinalp1-748baprlmhnhxwhtxdgsku.streamlit.app/) | [Dataset: IDRiD →](https://idrid.grand-challenge.org/)** | | [Report →](./report/report.pdf)
 
 <p align="center">
   <img src="./assets/gradcam_grid.png" width="800" alt="Grad-CAM visualization across DR severity levels">
@@ -56,24 +56,24 @@ This matters beyond the accuracy number: **a model that under-grades severity is
 ---
 
 ## Architecture
-
-```
-Input Fundus Image (224×224×3)
-        │
-        ▼
-  Preprocessing: circular crop → CLAHE (green channel) → Ben Graham normalization
-        │
-        ▼
+​```
+Input Fundus Image (224x224x3)
+        |
+        v
+  Preprocessing: circular crop -> CLAHE (green channel) -> Ben Graham normalization
+        |
+        v
   ResNet-50 Backbone (ImageNet pretrained, shared)
-        │
-        ├──────────────┐
-        ▼              ▼
-   DR Head          DME Head
-  (5 classes)      (3 classes)
-        │              │
-        ▼              ▼
-  Grad-CAM (DR)   Grad-CAM (DME)
-```
+        |
+    +---+---+
+    |       |
+    v       v
+ DR Head  DME Head
+(5 classes)(3 classes)
+    |       |
+    v       v
+Grad-CAM(DR) Grad-CAM(DME)
+​```
 
 The backbone is shared across both tasks rather than training two separate models — this reflects the clinical reality that DR and DME frequently co-occur and share underlying vascular pathology, and empirically produces a more data-efficient model given IDRiD's small size (413 training images).
 
