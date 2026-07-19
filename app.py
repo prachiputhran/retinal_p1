@@ -7,13 +7,15 @@ from PIL import Image
 # Imports from src
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
+sys.path.append("src")
 
 import config
 from model import MultiLabelRetinalNet
 from dataset import preprocess_fundus_image, IMAGENET_MEAN, IMAGENET_STD
 from gradcam_utils import DRHeadWrapper, DMEHeadWrapper
-from src.dataset import preprocess_fundus_image, IMAGENET_MEAN, IMAGENET_STD
-from src.gradcam_utils import DRHeadWrapper, DMEHeadWrapper
+from model import MultiLabelRetinalNet
+import config
+
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
